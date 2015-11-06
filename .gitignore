@@ -1,3 +1,9 @@
+#Eclipse IDE files
+*target*
+*.jar
+*.war
+*.class
+
 # Windows image file caches
 Thumbs.db
 ehthumbs.db
