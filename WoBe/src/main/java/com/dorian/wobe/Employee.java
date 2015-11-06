@@ -1,3 +1,10 @@
+package com.dorian.wobe;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+
+import org.springframework.data.annotation.Id;
+
 @Data
 @Entity
 public class Employee {
