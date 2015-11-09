@@ -1,3 +1,6 @@
+var React = require('react');
+var client = require('./client');
+
 var App = React.createClass({
 	getInitialState: function() {
 		return ({employees: []})
@@ -51,7 +54,7 @@ var Employee = React.createClass ({
 
 
 React.render(
-	<App />
+	<App />,
 	document.getElementById('react')
 )
 
