@@ -1,7 +1,7 @@
 package com.dorian.wobe;
 
-import org.springframework.data.repository.PagingAndSortingRepository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface EmployeeRepository extends PagingAndSortingRepository<Employee, Long> {
+public interface EmployeeRepository extends CrudRepository<Employee, Long> {
 
 }
