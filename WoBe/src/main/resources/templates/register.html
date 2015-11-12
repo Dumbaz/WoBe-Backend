@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title>ReactJS + Spring Data REST</title>
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+
+    <form>
+    	<label for="firstName">Vorname</label>
+    	<input id="firstName" th:field="*{firstName}" th:errorclass="fieldError" type="text" name="firstName" />
+    	<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Der Vorname sollte angegeben werden</p>
+    	
+    	<label for="lastName">Nachname</label>
+    	<input id="lastName" th:field="*{lastName}" th:errorclass="fieldErrror" type="text" name="lastName" />
+    	<p th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}">Der Nachname sollte vorhanden sein</p>
+    	
+    	<input type="submit" th:value="#{register.submit}" value="Registrieren" />
+    </form>
+
+</body>
+</html>
