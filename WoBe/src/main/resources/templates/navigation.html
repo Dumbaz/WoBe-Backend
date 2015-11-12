@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymleaf.org/extras/spring-security">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="/main.css" />
+</head>
+<body>
+
+	<nav th:fragment="navigation">
+		<ul>
+			<li>
+				<a th:href="@{/}" href="index.html" th:text="#{nav.home}">Home</a>
+			</li>
+			
+			<li sec:authorize="hasAnyRole('ROLE_USER')">
+				<a th:href="@{/profil}" href="profil.html" th:text="#{nav.profil}">Profil</a>
+			</li>
+			
+			<li sec:authorize="!isAuthenticated()" class="loginlogout">
+				<a th:href="@{/login}" th:text="#{nav.login}">Login</a>
+			</li>
+			
+			<li sec:authorize="!isAuthenticated()">
+				<a th:href="@{/register}" href="register.html" th:text="#{nav.register}">Registrierung</a>
+			</li>
+		</ul>	
+	</nav>
+
+</body>
+</html>
