@@ -7,7 +7,7 @@
 </head>
 <body>
 
-    <form>
+    <form method="post" action="registerNew" th:object="${registrationForm}">
     	<label for="firstName">Vorname</label>
     	<input id="firstName" th:field="*{firstName}" th:errorclass="fieldError" type="text" name="firstName" />
     	<p th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}">Der Vorname sollte angegeben werden</p>
