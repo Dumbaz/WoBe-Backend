@@ -1,0 +1,11 @@
+@page {
+    size: A4
+}
+
+table {
+    width: 210mm;
+}
+
+#main-table {
+    height: 297mm;
+}
