@@ -1,0 +1,19 @@
+digraph G {
+	fontname = "Bitstream Vera Sans"
+	fontsize = 8
+
+	node [
+		fontname = "Bitstream Vera Sans"
+		fontsize = 8
+		shape = "record"
+	]
+
+	Workday [
+		label = "{Workday|-dayname : String\l- workplace : String\l- actions : ArrayList\<String\>|}"
+	]
+
+	Actions [
+		label = "{Action|-content : String\l|}"
+	]
+
+}
